@@ -15,7 +15,7 @@ on("chat:message", function(msg) {
 
     if (msg.content.indexOf('!charsheet') != -1) {
         // replace the !charsheet command with nothing, leaving just the character name behind
-        var charName = msg.content;
+        charName = msg.content;
         charName.replace('!charsheet ', '');
         Charsheet.Generate(msg);
     }
